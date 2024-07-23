@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+  /*COLORS*/
+  --black: hsl(0, 0%, 2%);
+  --black2: hsl(0, 0%, 10%);
+  --black3: hsl(0, 0%, 20%);
+  --black4: hsl(0, 0%, 23%);
+  --grey: hsl(0, 0%, 51%);
+  --light-grey: hsl(0, 0%, 91%);
+  --dull-white: hsl(0, 0%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --purple: hsl(274, 82%, 60%);
+  --red: hsl(0, 100%, 66%);
+
+  /*FONTS*/
+  --inter: "Inter", sans-serif;
+  --lora: "Lora", serif;
+  --inconsolata: "Inconsolata", monospace;
+
+  /*FONT-SIZES*/
+  --heading-L: 4rem;
+  --heading-m: 1.5rem;
+  --heading-s: 1.25rem;
+  --body-m: 1.125rem;
+  --body-s: 0.875rem;
+
+  /*FONT-WEIGHTS*/
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+
+  /*LINE-HEIGHTS*/
+  --heading-LH: 1.2;
+  --heading-mLH: 1.4;
+  --heading-sLH: 1.6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+

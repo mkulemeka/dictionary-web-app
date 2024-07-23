@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+}
+
+.dividerLine {
+  width: 1px;
+  height: 100%;
+  background-color: var(--grey);
+}
+
+.img {
+  width: 28px;
+  height: 32px;
+}

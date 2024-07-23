@@ -1,0 +1,70 @@
+.fontSwitcher {
+  position: relative;
+}
+
+.fontSwitcherButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  img {
+    width: 12px;
+    height: 6px;
+  }
+}
+
+.button {
+  font-weight: var(--semi-bold);
+  background-color: transparent;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.buttonContainer {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 8rem;
+
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 0.75rem;
+
+  button {
+    text-align: left;
+    &:hover {
+      color: var(--purple) !important;
+    }
+  }
+}
+
+.button,
+.buttonContainer {
+  transition: 0.3s ease-in-out;
+}
+
+.dark {
+  .button {
+    color: var(--white);
+  }
+
+  .buttonContainer {
+    background-color: var(--black2);
+    box-shadow: -1px 0px 15px 1px var(--purple);
+  }
+}
+
+.light {
+  .button {
+    color: var(--black);
+  }
+
+  .buttonContainer {
+    background-color: var(--white);
+  }
+}

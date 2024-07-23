@@ -1,0 +1,39 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+
+  padding: 1.5rem;
+
+  overflow-x: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.sansSerif {
+  font-family: var(--inter);
+}
+
+.serif {
+  font-family: var(--lora);
+}
+
+.mono {
+  font-family: var(--inconsolata);
+}
+
+.dark {
+  background-color: var(--black);
+  color: var(--white);
+
+  h3 {
+    color: var(--grey);
+  }
+}
+
+.light {
+  background-color: var(--dull-white);
+  color: var(--black);
+
+  h3 {
+    color: var(--grey);
+  }
+}
