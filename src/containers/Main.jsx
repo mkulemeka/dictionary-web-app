@@ -30,7 +30,7 @@ const Main = () => {
         isDarkMode ? styles.dark : styles.light
       } ${currentFont()}`}
     >
-      <Header setIsDarkMode={setIsDarkMode} />
+      <Header />
       <Search setWord={setWord} />
       <Layout wordObject={data[0]} />
     </main>

@@ -1,12 +1,10 @@
-import { useContext, useState } from "react";
-
-import { DictionaryContext } from "../context/DictionaryProvider";
+import PropTypes from "prop-types";
 import arrowDown from "../assets/images/icon-arrow-down.svg";
 import styles from "../styles/FontSwitcher.module.css";
+import { useState } from "react";
 
 const fonts = ["Sans Serif", "Serif", "Mono"];
-const FontSwitcher = () => {
-  const { font, setFont, isDarkMode } = useContext(DictionaryContext);
+const FontSwitcher = ({ isDarkMode, font, setFont }) => {
   const [showOptions, setShowOptions] = useState(false);
 
   const showFontOptions = () => {
@@ -46,6 +44,12 @@ const FontSwitcher = () => {
       )}
     </div>
   );
+};
+
+FontSwitcher.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  font: PropTypes.string.isRequired,
+  setFont: PropTypes.func.isRequired,
 };
 
 export default FontSwitcher;

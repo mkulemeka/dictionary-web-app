@@ -7,12 +7,13 @@
 .section {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 
 .dividerLine {
-  width: 1px;
-  height: 100%;
-  background-color: var(--grey);
+  width: 2px;
+  background-color: var(--light-grey);
+  margin: 0 1rem;
 }
 
 .img {

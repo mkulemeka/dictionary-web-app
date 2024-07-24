@@ -7,7 +7,7 @@
   --black3: hsl(0, 0%, 20%);
   --black4: hsl(0, 0%, 23%);
   --grey: hsl(0, 0%, 51%);
-  --light-grey: hsl(0, 0%, 91%);
+  --light-grey: hsla(0, 0%, 91%, 0.914);
   --dull-white: hsl(0, 0%, 97%);
   --white: hsl(0, 0%, 100%);
   --purple: hsl(274, 82%, 60%);

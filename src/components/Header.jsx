@@ -1,26 +1,24 @@
 import { FontSwitcher, ThemeToggle } from "../components";
 
-import PropTypes from "prop-types";
+import { DictionaryContext } from "../context/DictionaryProvider";
 import logo from "../assets/images/logo.svg";
 import styles from "../styles/Header.module.css";
+import { useContext } from "react";
 
-const Header = ({ setIsDarkMode }) => {
+const Header = () => {
+  const { isDarkMode, font, setIsDarkMode, setFont } = useContext(DictionaryContext);
   return (
     <header className={styles.header}>
       <figure>
         <img src={logo} alt="logo" />
       </figure>
       <section className={styles.section}>
-        <FontSwitcher />
+        <FontSwitcher font={font} isDarkMode={isDarkMode} setFont={setFont} />
         <div className={styles.dividerLine}></div>
-        <ThemeToggle setIsDarkMode={setIsDarkMode} />
+        <ThemeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       </section>
     </header>
   );
-};
-
-Header.propTypes = {
-  setIsDarkMode: PropTypes.func.isRequired,
 };
 
 export default Header;
