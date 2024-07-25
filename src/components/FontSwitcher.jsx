@@ -4,7 +4,7 @@ import styles from "../styles/FontSwitcher.module.css";
 import { useState } from "react";
 
 const fonts = ["Sans Serif", "Serif", "Mono"];
-const FontSwitcher = ({ isDarkMode, font, setFont }) => {
+const FontSwitcher = ({ isDarkMode, font, setFont , currentFont}) => {
   const [showOptions, setShowOptions] = useState(false);
 
   const showFontOptions = () => {
@@ -29,7 +29,7 @@ const FontSwitcher = ({ isDarkMode, font, setFont }) => {
         <img src={arrowDown} alt="arrow down" />
       </button>
       {showOptions && (
-        <div className={styles.buttonContainer}>
+        <div className={`${styles.buttonContainer} ${currentFont()}`}>
           {fonts.map((fontItem, index) => (
             <button
               key={fontItem + index}
@@ -50,6 +50,7 @@ FontSwitcher.propTypes = {
   isDarkMode: PropTypes.bool.isRequired,
   font: PropTypes.string.isRequired,
   setFont: PropTypes.func.isRequired,
+  currentFont: PropTypes.func.isRequired,
 };
 
 export default FontSwitcher;

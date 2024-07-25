@@ -6,14 +6,20 @@ import styles from "../styles/Header.module.css";
 import { useContext } from "react";
 
 const Header = () => {
-  const { isDarkMode, font, setIsDarkMode, setFont } = useContext(DictionaryContext);
+  const { isDarkMode, font, setIsDarkMode, setFont, currentFont } =
+    useContext(DictionaryContext);
   return (
     <header className={styles.header}>
       <figure>
         <img src={logo} alt="logo" />
       </figure>
       <section className={styles.section}>
-        <FontSwitcher font={font} isDarkMode={isDarkMode} setFont={setFont} />
+        <FontSwitcher
+          font={font}
+          isDarkMode={isDarkMode}
+          setFont={setFont}
+          currentFont={currentFont}
+        />
         <div className={styles.dividerLine}></div>
         <ThemeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       </section>

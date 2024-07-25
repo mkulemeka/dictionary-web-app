@@ -9,18 +9,9 @@ import useAxios from "../hooks/useAxios";
 
 const Main = () => {
   const [word, setWord] = useState("");
-  const { isDarkMode, setIsDarkMode, font } = useContext(DictionaryContext);
+  const { isDarkMode, currentFont } = useContext(DictionaryContext);
   const { data, loading, error } = useAxios(word);
 
-  /**
-   * Updates the font style based on the current font
-   * @returns {string} - The current font style
-   */
-  const currentFont = () => {
-    if (font === "Serif") return styles.serif;
-    if (font === "Mono") return styles.mono;
-    return styles.sansSerif;
-  };
 
   if (loading) return <p>Loading...</p>;
 
@@ -31,7 +22,7 @@ const Main = () => {
       } ${currentFont()}`}
     >
       <Header />
-      <Search setWord={setWord} />
+      <Search setWord={setWord} isDarkMode={isDarkMode} currentFont={currentFont}/>
       <Layout wordObject={data[0]} />
     </main>
   );
