@@ -36,6 +36,11 @@
   --heading-LH: 1.2;
   --heading-mLH: 1.4;
   --heading-sLH: 1.6;
+
+  /*SCREEN-SIZES*/
+  --mobile: 375px;
+  --tablet: 768px;
+  --desktop: 1024px;
 }
 
 * {

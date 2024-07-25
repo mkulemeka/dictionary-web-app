@@ -1,0 +1,48 @@
+.playButton,
+.section {
+  display: flex;
+  align-items: center;
+}
+
+.section {
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  h1 {
+    font-size: 2.25rem;
+
+    @media (min-width: var(--tablet)) {
+      font-size: 2.75rem;
+    }
+
+    @media (min-width: var(--desktop)) {
+      font-size: 4rem;
+    }
+  }
+
+  small {
+    color: var(--purple);
+    font-size: 1.2rem;
+  }
+}
+
+.playButton {
+  width: 3rem;
+  background-color: transparent;
+
+  border: none;
+  outline: transparent;
+
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
+}

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import playIcon from "../assets/images/icon-play.svg";
+import styles from "../styles/WordAudio.module.css";
 const WordAudio = ({ word, phonetics }) => {
   const phonetic = phonetics.at(-1);
   
@@ -9,13 +10,13 @@ const WordAudio = ({ word, phonetics }) => {
   };
 
   return (
-    <section>
-      <div>
+    <section className={styles.section}>
+      <div className={styles.div}>
         <h1>{word}</h1>
         <small>{phonetic.text}</small>
       </div>
       <figure>
-        <button onClick={handleAudioPlay} onKeyDown={handleAudioPlay}>
+        <button className={styles.playButton} onClick={handleAudioPlay} onKeyDown={handleAudioPlay}>
           <img src={playIcon} alt="Play Icon" />
         </button>
         <audio src={phonetic.audio} id="word-audio">
