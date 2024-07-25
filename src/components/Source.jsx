@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 import sourceIcon from "../assets/images/icon-new-window.svg";
+import styles from "../styles/Source.module.css";
 const Source = ({ sourceUrls }) => {
   const [source] = sourceUrls;
   return (
-    <div>
+    <div className={styles.div}>
       <h3>Source</h3>
       <a href={source} target="_blank" rel="noreferrer">
         {source}

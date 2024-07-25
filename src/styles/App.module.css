@@ -31,6 +31,10 @@
   h3 {
     color: var(--grey);
   }
+
+  a {
+    color: var(--white);
+  }
 }
 
 .light {
@@ -39,5 +43,9 @@
 
   h3 {
     color: var(--grey);
+  }
+
+  a {
+    color: var(--black);
   }
 }

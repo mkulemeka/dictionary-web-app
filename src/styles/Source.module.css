@@ -1,0 +1,21 @@
+.div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @media (min-width: var(--tablet)) {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  h3 {
+    font-weight: var(--regular);
+    text-decoration: underline;
+  }
+
+  a {
+    img {
+      margin-left: 0.75rem;
+    }
+  }
+}
