@@ -41,6 +41,19 @@
   flex-direction: column;
   gap: 0.8125rem;
 
+  list-style: none;
+  list-style-position: inside;
+  padding-left: 1.5rem;
+
+  li::before {
+    content: "•";
+    color: var(--purple);
+    font-size: var(--body-m);
+    display: inline-block;
+    width: 1.5em;
+    margin-left: -1.5em;
+  }
+
   blockquote {
     margin-top: 0.8125rem;
     color: var(--grey);
@@ -49,10 +62,12 @@
 
 .synonyms {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.725rem;
 
   span {
+    display: flex;
+    flex-wrap: wrap;
+
     font-size: var(--body-m);
     font-weight: var(--semi-bold);
     color: var(--purple);

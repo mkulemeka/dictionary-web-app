@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import playIcon from "../assets/images/icon-play.svg";
 import styles from "../styles/WordAudio.module.css";
 const WordAudio = ({ word, phonetics }) => {
-  const phonetic = phonetics.at(-1);
+  const phonetic = phonetics.at(-1) ?? { text: "", audio: "" };
   
   const handleAudioPlay = () => {
     const audio = document.getElementById("word-audio");

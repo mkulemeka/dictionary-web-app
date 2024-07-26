@@ -5,3 +5,4 @@ export {default as FontSwitcher} from './FontSwitcher.jsx';
 export {default as WordAudio} from './WordAudio.jsx';
 export {default as PartOfSpeech} from './PartOfSpeech.jsx';
 export {default as Source } from './Source.jsx';
+export {default as SearchError} from './SearchError.jsx';
