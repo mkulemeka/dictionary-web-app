@@ -7,8 +7,11 @@ const useAxios = (word = "") => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // const url = "data.json";
-
+  /**
+   * Fetch data from the Dictionary API. If the word is empty, set loading to false and return. Otherwise, make a request to the API and set the data, loading, and error states accordingly.
+   * @returns {Promise<void>}
+   * @param {string} word
+   */
   const fetchData = useCallback(async () => {
     try {
       if (!word) {
@@ -23,7 +26,7 @@ const useAxios = (word = "") => {
       setLoading(false);
       setError(null);
     } catch (error) {
-      setError(error.response.data);
+      setError(error?.response?.data);
       setLoading(false);
     }
   }, [word]);
@@ -31,7 +34,7 @@ const useAxios = (word = "") => {
   useEffect(() => {
     fetchData();
   }, [fetchData]);
-  
+
   return { data, loading, error };
 };
 

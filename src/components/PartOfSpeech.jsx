@@ -27,7 +27,7 @@ const PartOfSpeech = ({ meaning }) => {
       {synonyms.length ? (
         <section className={styles.synonyms}>
           <h3>Synonyms</h3>
-          <span>{synonyms.join(", ")}</span>
+          <span>{synonyms.slice(0, 10).join(", ")}</span>
         </section>
       ) : (
         <></>
