@@ -1,17 +1,22 @@
+import { DictionaryContext } from "../context/DictionaryProvider";
 import PropTypes from "prop-types";
 import styles from "../styles/PartOfSpeech.module.css";
+import { useContext } from "react";
 const PartOfSpeech = ({ meaning }) => {
+  const { isDarkMode } = useContext(DictionaryContext);
   const { partOfSpeech, definitions, synonyms } = meaning;
   return (
     <section className={styles.partOfSpeech}>
       <section className={styles.heading}>
         <h2>{partOfSpeech}</h2>
-        <div></div>
+        <div
+          className={`${styles.line} ${isDarkMode ? styles.dark : styles.light}`}
+        ></div>
       </section>
       <section className={styles.meaningSection}>
         <h3>Meaning</h3>
         <ul className={styles.definitions}>
-          {definitions.slice(0,4).map((def, index) => (
+          {definitions.slice(0, 4).map((def, index) => (
             <li key={def.definition[0] + index}>
               {def?.definition}
               {def.example && <blockquote>{`"${def.example}"`}</blockquote>}

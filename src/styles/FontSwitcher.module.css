@@ -11,6 +11,15 @@
     width: 12px;
     height: 6px;
   }
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+    gap: 1rem;
+    img {
+      width: 16px;
+      height: 8px;
+    }
+  }
 }
 
 .button {
@@ -19,6 +28,10 @@
   border: 1px solid transparent;
   outline: none;
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 .buttonContainer {
@@ -41,6 +54,12 @@
     &:hover {
       color: var(--purple) !important;
     }
+  }
+
+  @media (min-width: 768px) {
+    top: 2.5rem;
+    width: 10rem;
+    padding: 1.25rem;
   }
 }
 

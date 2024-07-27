@@ -17,9 +17,17 @@
     margin: 2rem 0;
   }
 
-  div {
+  .line {
     height: 2px;
     width: 100%;
+    transition: .3s;
+  }
+
+  .dark {
+    background-color: var(--grey);
+  }
+
+  .light {
     background-color: var(--light-grey);
   }
 }
